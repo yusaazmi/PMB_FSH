@@ -10,6 +10,7 @@ if (isset($_POST['Email']) AND isset($_POST['Password']))
     if($cek > 0)
     {
         $data = mysqli_fetch_array($login);
+        $_SESSION['No_Pendaftaran'] = $data['No_Pendaftaran'];
         $_SESSION['Email'] = $data['Email'];
         // var_dump($data);
             echo "<script>alert('berhasil login');window.location='index.php'</script>";
