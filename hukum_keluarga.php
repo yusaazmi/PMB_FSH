@@ -4,8 +4,8 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Syarat Pendaftaran</h2>
-        <p> </p>
+        <h2>Hukum Keluarga</h2>
+        <p>Syariah menurut Hanafi adalah hukum-hukum yang diadakan oleh Tuhan untuk para hamba-Nya melalui salah seorang Nabi-Nya, baik hukum tersebut berkaitan dengan cara mengadakan perbuatan yang disebut sebagai hukum cabang atau amalan. </p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -18,68 +18,30 @@
             <img src="assets/assetss/fsh1.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Cara Pendaftaran Mahasiswa Baru</h3>
-            <!-- <p class="fst-italic">
+            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
-            </p> -->
+            </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i>Mengisi formulir pendaftaran yang telah disediakan panitia atau dapat melalui online di <a href="#" onclick=window.open('https://pmb.unsiq.ac.id')>https://pmb.unsiq.ac.id</a></li>
-              <li><i class="bi bi-check-circle"></i>Fotocopy Legalisir ijazah/Surat tanda kelulusan dan surat keterangan hasil ujian (bagi yang sudah ada).</li>
-              <li><i class="bi bi-check-circle"></i>Foto berwarna merah ukuran 3x4 gaya formal</li>
-              <li><i class="bi bi-check-circle"></i>Scan Akta Kelahiran dan Kartu Keluarga(KK).</li>
-              <li><i class="bi bi-check-circle"></i>Melakukan pembayaran biaya pendaftaran melalui Bank Jateng atau jaringan IDN menggunakan nomor pendaftaran (tidak menggunakan nomor rekening).</li>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
             </ul>
-            <!-- <p>
+            <p>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p> -->
+            </p>
 
           </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
-    <section id="about" class="about pt-2">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/assetss/fsh1.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-2 content">
-            <h3>Profil Lulusan</h3>
-            <div class="row">
-              <div class="col-6">
-                <ul>
-                  <li><i class="bi bi-award-fill"></i>PNS</li>
-                  <li><i class="bi bi-award-fill"></i>Jaksa</li>
-                  <li><i class="bi bi-award-fill"></i>Hakim</li>
-                  <li><i class="bi bi-award-fill"></i>Advokat</li>
-                  <li><i class="bi bi-award-fill"></i>Bankir</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul>
-                  <li><i class="bi bi-award-fill"></i>Penyuluh Agama</li>
-                  <li><i class="bi bi-award-fill"></i>Akademi (Dosen,Guru,Peneliti)</li>
-                  <li><i class="bi bi-award-fill"></i>Mufasir Al-Qur'an</li>
-                  <li><i class="bi bi-award-fill"></i>Ulama</li>
-                  <li><i class="bi bi-award-fill"></i>Konseling Hukum Keluarga</li>
-                </ul>
-              </div>
-            </div>
-            <!-- <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p> -->
-
-          </div>
-      </div>
-    </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
 
     <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -103,7 +65,7 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
@@ -118,7 +80,7 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
@@ -133,7 +95,7 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
@@ -148,7 +110,7 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
@@ -163,22 +125,21 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div><!-- End testimonial item -->
 
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section> -->
-    <!-- End Testimonials Section -->
+    </section><!-- End Testimonials Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <!-- <div class="footer-top">
+    <div class="footer-top">
       <div class="container">
         <div class="row">
 
@@ -225,13 +186,20 @@
 
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="container d-md-flex py-4">
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Fakultas Syariah dan Hukum Universitas Sains Al-Qur'an</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

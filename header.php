@@ -46,42 +46,34 @@ session_start();
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">FSH</a></h1>
+      <h1 class="logo me-auto"><a href="index.html">Fakultas Syariah dan Hukum</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="index.php">Home</a></li>
+          <li><a class="active" href="index.php">Beranda</a></li>
           <?php
           if(!isset($_SESSION['Email'])){
-            echo "<li><a href='about.php'>About</a></li>";
+            echo "<li><a href='about.php'>Tentang</a></li>";
           }
           else{
             echo "<li><a href='profile.php'>Profile</a></li>";
             echo "<li><a href='pdf.php'>Status Pendaftaran</a></li>";
-            echo "<li><a href='about.php'>About</a></li>";
+            echo "<li><a href='about.php'>Tentang</a></li>";
           }
           ?>
 
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Program Studi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="hukum_keluarga.php">Hukum Keluarga</a></li>
+              <li><a href="hukum_ekonomi.php">Hukum Ekonomi Syari'ah</a></li>
+              <li><a href="#">Ilmu Al-Qur'an</a></li>
+              <li><a href="#">Ilmu Hukum</a></li>
+              <li><a href="#">Perbankan Syari'ah</a></li>
             </ul>
-          </li> -->
-          <li><a href="contact.php">Contact</a></li>
+          </li>
+          <li><a href="contact.php">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
