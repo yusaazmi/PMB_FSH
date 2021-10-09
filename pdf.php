@@ -1,38 +1,171 @@
 <?php
 include 'koneksi.php';
-// memanggil library FPDF
 require('fpdf/fpdf.php');
-// intance object dan memberikan pengaturan halaman PDF
-$pdf = new FPDF('l','mm','A5');
-// membuat halaman baru
-$pdf->AddPage();
-// setting jenis font yang akan digunakan
-$pdf->SetFont('Arial','B',16);
-// mencetak string 
-$pdf->Cell(190,7,'Daftar Calon Mahasiswa Baru FSH',0,1,'C');
-$pdf->SetFont('Arial','B',12);
-// $pdf->Cell(190,7,'DAFTAR SISWA KELAS IX JURUSAN REKAYASA PERANGKAT LUNAK',0,1,'C');
 
-// Memberikan space kebawah agar tidak terlalu rapat
-$pdf->Cell(10,7,'',0,1);
-
-$pdf->SetFont('Arial','B',10);
-$pdf->Cell(30,6,'No Pendaftaran',1,0);
-$pdf->Cell(50,6,'Nama Lengkap',1,0);
-$pdf->Cell(50,6,'Email',1,0);
-$pdf->Cell(30,6,'Prodi_pilihan',1,0);
-$pdf->Cell(25,6,'Jenis Kelamin',1,1);
-
-$pdf->SetFont('Arial','',10);
-
-$sql = mysqli_query($dbc, "select * from table_pendaftaran");
-while ($data = mysqli_fetch_array($sql)){
-    $pdf->Cell(30,6,$data['No_Pendaftaran'],1,0);
-    $pdf->Cell(50,6,$data['Nama_lengkap'],1,0);
-    $pdf->Cell(50,6,$data['Email'],1,0);
-    $pdf->Cell(30,6,$data['Prodi_pilihan'],1,0); 
-    $pdf->Cell(25,6,$data['Jenis_kelamin'],1,1); 
+class pdf extends FPDF
+{
+    function letak($gambar)
+    {
+    //memasukkan gambar untuk header
+    $this->Image($gambar,8,5,25,25);
+    //menggeser posisi sekarang
+    }
+    function judul($teks1, $teks2, $teks3, $teks4, $teks5)
+    {
+        $this->Cell(15);
+        $this->SetFont('Times','B','12');
+        $this->Cell(0,5,$teks1,0,1,'C');
+        $this->Cell(15);
+        $this->Cell(0,5,$teks2,0,1,'C');
+        $this->Cell(15);
+        $this->SetFont('Times','B','15');
+        $this->Cell(0,5,$teks3,0,1,'C');
+        $this->Cell(15);
+        $this->SetFont('Times','','8');
+        $this->Cell(0,15,$teks4,0,1,'C');
+        $this->Cell(15);
+        $this->Cell(0,-7,$teks5,0,1,'C');
+    }
+    function garis()
+    {
+        $this->SetLineWidth(1);
+        $this->Line(0,30,300,30);
+        $this->SetLineWidth(1);
+        $this->Line(0,39,250,39);
+    }
+    function nomor($text6,$text7,$text8)
+    {
+        $this->Cell(8);
+        $this->SetFont('Times','','10');
+        $this->Cell(80,23,$text6,0,1,'L');
+        $this->Cell(8);
+        $this->SetFont('Times','','10');
+        $this->Cell(17,-13,$text7,0,1,'L');
+        $this->Cell(8);
+        $this->SetFont('Times','','10');
+        $this->Cell(21,22,$text8,0,1,'L');
+    }
+    function salam($text9)
+    {
+        $this->Cell(8);
+        $this->SetFont('Times','BI','12');
+        $this->Cell(80,4,$text9,0,1,'L');
+    }
+    function salam1($text9)
+    {
+        $this->Cell(8);
+        $this->SetFont('Times','BI','12');
+        $this->Cell(80,10,$text9,0,1,'L');
+    }
+    function tanggal($text)
+    {
+        $this->Cell(10);
+        $this->SetFont('Times','','12');
+        $this->Cell(0,10,$text,0,1,'R');
+        $this->Cell(15);
+        $this->Cell(0,3,'Mengetahui,',0,1,'R');
+        $this->Cell(15);
+        $this->Cell(0,6,'Ketua Panitia Penerimaan Mahasiswa Baru',0,1,'R');
+        $this->Ln();
+        $this->Ln();
+        $this->Ln();
+        $this->Cell(15);
+        $this->SetFont('Times','BU','12');
+        $this->Cell(15);
+        $this->Cell(0,10,'Nama ketua',0,10,'R');
+        $this->Cell(0,3,'NPU :',0,10,'R');
+    }
+    function nama($text10)
+    {
+        $this->Cell(20);
+        $this->SetFont('Times','','12');
+        $this->Cell(80,10,$text10,0,1,'L');
+    }
+    function nim($text10)
+    {
+        $this->Cell(20);
+        $this->SetFont('Times','','12');
+        $this->Cell(80,10,$text10,0,1,'L');
+    }
+    function prodi($text10)
+    {
+        $this->Cell(20);
+        $this->SetFont('Times','','12');
+        $this->Cell(80,10,$text10,0,1,'L');
+    }
+    function keterangan($text11)
+    {
+        $this->Cell(8);
+        $this->SetFont('Times','B','12');
+        $this->Cell(80,10,$text11,0,1,'L');
+    }
+    function hasil($text)
+    {
+        $this->Cell(20);
+        $this->SetFont('Times','B','12');
+        $this->Cell(0,10,$text,0,1,'C');
+    }
+    function FancyTable($no,$materi,$nilai, $data)
+    {
+    // Colors, line width and bold font
+    $header = array($no,$materi,$nilai);
+    $this->Cell(55);
+    $this->SetFillColor(14,206,0);
+    $this->SetTextColor(255);
+    $this->SetDrawColor(128,0,0);
+    $this->SetLineWidth(.3);
+    $this->SetFont('','B');
+    // Header
+    $w = array(20, 35, 40);
+    for($i=0;$i<3;$i++)
+        $this->Cell($w[$i],7,$header[$i],1,0,'C',true);
+    $this->Ln();
+    // Color and font restoration
+    $this->SetFillColor(224,235,255);
+    $this->SetTextColor(0);
+    $this->SetFont('');
+    // Data
+    $fill = false;
+    for($a=1;$a<4;$a++)
+    {
+        $this->Cell(55);
+        $this->Cell($w[0],6,$a,'LR',0,'C',$fill);
+        $this->Cell($w[1],6,$data,'LR',0,'C',$fill);
+        $this->Cell($w[2],6,$data,'LR',0,'C',$fill);
+        $this->Ln();
+        $fill = !$fill;
+    }
+    // Closing line
+    $this->Cell(55);
+    $this->Cell(array_sum($w),0,'','T');
+    }
 }
+    $pdf=new pdf();
 
-$pdf->Output();
+    //Mulai dokumen
+    $pdf->AddPage('P', 'A4');
+    //meletakkan gambar
+    $pdf->letak('assets/assetss/unsiq.png');
+    //meletakkan judul disamping logo diatas
+    $pdf->judul('FAKULTAS SYARIAH DAN HUKUM', 'UNIVERSITAS SAINS AL-QUR\'AN','JAWA TENGAH DI WONOSOBO','Fakultas Syariah dan Hukum (FSH) Jl. KH. Hasyim Asy\'ari KM.03, Kalibeber, Mojotengah, Wonosobo 56351', 'Kontak : 0813-2424-7010 | Website: http://pmb.unsiq.ac.id Dan http://unsiq.ac.id');
+    //membuat garis ganda tebal dan tipis
+    $pdf->garis();
+    $pdf->nomor('No Surat Keterangan : 001/PMB-FSH/UNSIQ/Bulan Romawi/2021','No Pendaftaran          : Nomor Pendaftaran','Hal                             : Surat Keterangan');
+    $pdf->salam('Assalamual\'aikum, Wr.Wb.');
+    $pdf->SetFont('Times','',12);
+    $pdf->MultiCell(0, 5, '     Yang bertanda tanda tangan di bawah ini Ketua Panitia Mahasiswa Baru Universitas Sains Al-Quraan (UNSIQ) Jawa Tengah di Wonosobo Tahun Akademik 2021. Berdasarkan dari hasil seleksi yang di lakukan calon mahasiswa baru Gelombang pada Hari, Tanggal Bulan Tahun menyatakan bahwa :');
+    $pdf->nama('Nama         :');
+    $pdf->nim('NIM           :');
+    $pdf->prodi('Prodi          :');
+    $pdf->keterangan('Diterima sebagai mahasiswa Universitas Sains Al-Qur\'an di Fakultas Syariah dan Hukum Kelas B.');
+    $pdf->hasil('HASIL TEST');
+    $pdf->FancyTable('no','materi','nilai','data');
+    $pdf->SetFont('Times','',12);
+    $pdf->Cell(20,10,'',0,1,'L');
+    $pdf->MultiCell(0,5,'   Demikian permohonan ini kami sampaikan, surat keterangan yang kami buat dengan yang sebenar-benarnya dan dapat di pergunakan dengan semestinya.');
+    $pdf->salam1('Wallahul Muwafiq Illa Aqwamit Thorieq');
+    $pdf->salam('Wassalamu\'alaikum,Wr.Wb.');
+    $pdf->tanggal('Wonosobo, tanggal bulan 2021');
+    
+    $pdf->Output('surat-keterangan-mahasiswa-baru.pdf','I');
 ?>

@@ -74,6 +74,7 @@ session_start();
             </ul>
           </li>
           <li><a href="contact.php">Kontak</a></li>
+          <!-- <li><a href="about_registration.php">Cara Pendaftaran</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
