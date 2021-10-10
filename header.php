@@ -55,7 +55,7 @@ session_start();
           <li><a class="active" href="index.php">Beranda</a></li>
           <?php
           if(!isset($_SESSION['Email'])){
-            echo "<li><a href='about.php'>Tentang</a></li>";
+            echo "<li><a href='about.php'>Pendaftaran</a></li>";
           }
           else{
             echo "<li><a href='profile.php'>Profile</a></li>";
@@ -67,7 +67,7 @@ session_start();
           <li class="dropdown"><a href="#"><span>Program Studi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="hukum_keluarga.php">Hukum Keluarga</a></li>
-              <li><a href="hukum_ekonomi.php">Hukum Ekonomi Syari'ah</a></li>
+              <!-- <li><a href="hukum_ekonomi.php">Hukum Ekonomi Syari'ah</a></li> -->
               <li><a href="#">Ilmu Al-Qur'an</a></li>
               <li><a href="#">Ilmu Hukum</a></li>
               <li><a href="#">Perbankan Syari'ah</a></li>

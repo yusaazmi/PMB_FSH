@@ -41,6 +41,34 @@
 
       </div>
     </section><!-- End About Section -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="d-flex justify-content-center">
+            <h3 style="text">Visi dan Misi</h3>
+
+          </div>
+          <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Visi</h3>
+            <p>
+              Unggul dalam mengitergrasikan ilmu-ilmu syari’ah dan hukum yang hukum yang Qur’ani. humanis dan transformatif ke-indonesian pada tahun 2026.
+            </p>
+            <br>
+            <h3>Misi</h3>
+            <ol>
+              <li>Menyenggarakan pendidikan pengajaran di bidang ilmu tafsir di bidang ilmu syari’ah, hukum ekonomi islam, ilmu tafsir yang bermutu dan relevan untuk pengembangan keilmuan dan mendukung praktikum hukum </li>
+              <li>Meberikan landasan nilai-nilai Qur’ani ahlak yang mulia bagi pengembangan dan penerapan ilmu-ilmu syari’ah dan hukum di masyarakat </li>
+              <li>Melaksanakan pengkajian, Penelitian dan pengembangan dalam bidang ilmu syari’ah, hukum ekonomi islam, guna pengmbangan dan penerapan keilmuan dan untuk meningkatkan profesionalitas lulusan yang bermanfaat bagi masyarakat.</li>
+              <li>Melaksanakan penyuluhan, advokasi dan pengabdian hukum islam, hukum umum pada masyarakat.</li>
+              <li>Menguatkan sistem manajemen dalam mengelola program studi</li>
+              <li>Mengoptimalisasi jaringan kerjasama, baik dalam skala lokal, nasioanl maupun internasional, terutama yang terkait dengan kelembagaan dan pegembangan ilmu syari’ah dan hukum</li>
+            </ol>      
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts section-bg">
@@ -54,7 +82,7 @@
           </div>
 
           <div class="col-lg-4 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
             <p>Program Studi</p>
           </div>
 
@@ -72,76 +100,17 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mentor</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
     <div class="container d-md-flex py-4">
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; Copyright <strong><span>Fakultas Hukum dan Syari'ah</span></strong>. All Rights Reserved
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->

@@ -108,28 +108,12 @@ session_start();
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-end">
-                        <!-- ============================================================== -->
-                        <!-- Comment -->
-                        <!-- ============================================================== -->
-                        <!-- ============================================================== -->
-                        <!-- End Comment -->
-                        <!-- ============================================================== -->
-                        <!-- ============================================================== -->
-                        <!-- Messages -->
-                        <!-- ============================================================== -->
-                        <!-- ============================================================== -->
-                        <!-- End Messages -->
-                        <!-- ============================================================== -->
-
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="javascript:void(0)"><i
+                                <a class="dropdown-item" href="logout_admin.php"><i
                                         class="fa fa-power-off me-1 ms-1"></i> Logout</a>
                                 <div class="dropdown-divider"></div>
                             </ul>
@@ -154,11 +138,15 @@ session_start();
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" class="pt-4">
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                href="dashboard.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="data_pendaftaran.php" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
                                     class="hide-menu">Data Pendaftaran</span></a></li>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="data_hasil.php" aria-expanded="false"><i class="mdi mdi-account"></i><span
+                                    class="hide-menu">Hasil Tes</span></a></li>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="data_admin.php" aria-expanded="false"><i class="mdi mdi-account"></i><span

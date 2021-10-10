@@ -157,7 +157,7 @@ a.socialIcon:hover,
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <form action="simpan.php" method="POST" class="box">
+                <form action="login_admin.php" method="POST" class="box">
                     <h2 style="color:white;">Login Admin</h2>
                     <p class="text-muted"> Please enter your login and password!</p> <input type="text" name="Username" placeholder="Username"> <input type="password" name="Password" placeholder="Password"> <input type="submit" name="" value="Login" href="#">
                     <!-- <div class="col-md-12">

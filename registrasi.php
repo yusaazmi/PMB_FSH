@@ -34,7 +34,7 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col-md-4 form-group">
-                            <select class="form-select" name="Prodi" aria-label="Default select example">
+                            <select class="form-select" name="Prodi_pilihan" aria-label="Default select example">
                                 <option selected>Pilih Program Studi</option>
                                 <option value="Hukum Keluarga">Hukum Keluarga</option>
                                 <option value="Ilmu Hukum">Ilmu Hukum</option>

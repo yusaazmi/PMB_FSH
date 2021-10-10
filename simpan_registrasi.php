@@ -28,9 +28,15 @@ if(move_uploaded_file($tmp , $path)){
     $query = "INSERT INTO table_pendaftaran (Email,Password,Nama_lengkap,Prodi_pilihan,Tempat_lahir,Tanggal_lahir,Jenis_kelamin,Alamat,Provinsi,Kode_pos,Asal_sekolah,Nama_bapak,Nama_ibu,Pekerjaan,Status_perkawinan,foto) values ('$Email','$Password','$Nama_lengkap','$Prodi_pilihan','$Tempat_lahir','$Tanggal_lahir','$Jenis_kelamin','$Alamat','$Provinsi','$Kode_pos','$Asal_sekolah','$Nama_bapak','$Nama_ibu','$Pekerjaan','$Status_perkawinan','$gambar')";
     mysqli_query($dbc,$query) or die(mysqli_error($dbc));
 
-    if($query)
+    $select = "SELECT * FROM table_pendaftaran where Email = '$Email'";
+    $data = mysqli_query($dbc,$select);
+    $data1 = mysqli_fetch_array($data);
+    // var_dump($data1);
+    $query2 = "INSERT INTO table_hasil_test(No_Pendaftaran,Nilai_test1,Nilai_test2,Nilai_test3,Status) values ('','$data1[No_Pendaftaran]','','','','Belum Diterima')";
+    $hasil = mysqli_query($dbc,$query2);
+    if($query2)
     {
-        // echo "<script>alert('Berhasil Menambahkan!');window.location='index.php';</script>";
+        echo "<script>alert('Berhasil Menambahkan!');window.location='index.php';</script>";
     }
     else
     {

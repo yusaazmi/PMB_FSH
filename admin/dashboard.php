@@ -36,6 +36,11 @@
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- Column -->
+                    <?php 
+                    $query = "SELECT COUNT(No_Pendaftaran) as total FROM table_pendaftaran";
+                    $sql = mysqli_query($dbc,$query);
+                    $array = mysqli_fetch_array($sql);
+                    ?>
                     <div class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-cyan text-center">
@@ -50,20 +55,13 @@
                             <div class="card card-hover">
                                 <div class="box bg-success text-center">
                                     <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
-                                    <h6 class="text-white">Charts</h6>
+                                    <h6 class="text-white">Data Pendaftaran Calon Mahasiswa</h6>
+                                    <span style="color:white;">Pendaftar : <?php echo $array['total']; ?></span>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-warning text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                                <h6 class="text-white">Widgets</h6>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Column -->
                 </div>
                 <!-- ============================================================== -->
