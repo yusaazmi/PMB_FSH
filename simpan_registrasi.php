@@ -32,8 +32,8 @@ if(move_uploaded_file($tmp , $path)){
     $data = mysqli_query($dbc,$select);
     $data1 = mysqli_fetch_array($data);
     // var_dump($data1);
-    $query2 = "INSERT INTO table_hasil_test(No_Pendaftaran,Nilai_test1,Nilai_test2,Nilai_test3,Status) values ('','$data1[No_Pendaftaran]','','','','Belum Diterima')";
-    $hasil = mysqli_query($dbc,$query2);
+    $query2 = "INSERT INTO table_hasil_test (No_Pendaftaran,Nilai_test1,Nilai_test2,Nilai_test3,Status) values ('$data1[No_Pendaftaran]','','','','Belum Diterima')";
+    $hasil = mysqli_query($dbc,$query2) or die(mysqli_error($dbc));
     if($query2)
     {
         echo "<script>alert('Berhasil Menambahkan!');window.location='index.php';</script>";
