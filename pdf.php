@@ -95,7 +95,7 @@ class pdf extends FPDF
     }
     function keterangan($text11)
     {
-        $this->Cell(8);
+        $this->Cell(1);
         $this->SetFont('Times','B','12');
         $this->Cell(80,10,$text11,0,1,'L');
     }
@@ -105,7 +105,7 @@ class pdf extends FPDF
         $this->SetFont('Times','B','12');
         $this->Cell(0,10,$text,0,1,'C');
     }
-    function FancyTable($no,$materi,$nilai, $data)
+    function FancyTable($no,$materi,$nilai, $data1,$data2,$data3)
     {
     // Colors, line width and bold font
     $header = array($no,$materi,$nilai);
@@ -126,13 +126,17 @@ class pdf extends FPDF
     $this->SetFont('');
     // Data
     $fill = false;
-    for($a=1;$a<4;$a++)
+    $test = ['Materi 1','Materi 2','Materi 3'];
+    $nomr = 1;
+    $nilai = [$data1,$data2,$data3];
+    for($a=0;$a<=2;$a++)
     {
         $this->Cell(55);
-        $this->Cell($w[0],6,$a,'LR',0,'C',$fill);
-        $this->Cell($w[1],6,$data,'LR',0,'C',$fill);
-        $this->Cell($w[2],6,$data,'LR',0,'C',$fill);
+        $this->Cell($w[0],6,$nomr,'LR',0,'C',$fill);
+        $this->Cell($w[1],6,$test[$a],'LR',0,'C',$fill);
+        $this->Cell($w[2],6,$nilai[$a],'LR',0,'C',$fill);
         $this->Ln();
+        $nomr++;
         $fill = !$fill;
     }
     // Closing line
@@ -140,6 +144,12 @@ class pdf extends FPDF
     $this->Cell(array_sum($w),0,'','T');
     }
 }
+$query = "SELECT * from table_pendaftaran WHERE No_Pendaftaran = '$_GET[id]'";
+$query2 = "SELECT * from table_hasil_test WHERE No_Pendaftaran = '$_GET[id]'";
+$sql = mysqli_query($dbc,$query);
+$sql2 = mysqli_query($dbc,$query2);
+$data = mysqli_fetch_array($sql);
+$data2 = mysqli_fetch_array($sql2);
     $pdf=new pdf();
 
     //Mulai dokumen
@@ -154,18 +164,50 @@ class pdf extends FPDF
     $pdf->salam('Assalamual\'aikum, Wr.Wb.');
     $pdf->SetFont('Times','',12);
     $pdf->MultiCell(0, 5, '     Yang bertanda tanda tangan di bawah ini Ketua Panitia Mahasiswa Baru Universitas Sains Al-Quraan (UNSIQ) Jawa Tengah di Wonosobo Tahun Akademik 2021. Berdasarkan dari hasil seleksi yang di lakukan calon mahasiswa baru Gelombang pada Hari, Tanggal Bulan Tahun menyatakan bahwa :');
-    $pdf->nama('Nama         :');
-    $pdf->nim('NIM           :');
-    $pdf->prodi('Prodi          :');
-    $pdf->keterangan('Diterima sebagai mahasiswa Universitas Sains Al-Qur\'an di Fakultas Syariah dan Hukum Kelas B.');
+    $pdf->nama('Nama                 : '.$data['Nama_lengkap']);
+    $pdf->nim('No Pendaftaran  : '.$data['No_Pendaftaran']);
+    $pdf->prodi('Prodi                  : '.$data['Prodi_pilihan']);
+
+    $pdf->keterangan($data2['Status'].' sebagai mahasiswa Universitas Sains Al-Qur\'an di Fakultas Syariah dan Hukum Kelas B.');
     $pdf->hasil('HASIL TEST');
-    $pdf->FancyTable('no','materi','nilai','data');
+    $test = ['materi 1','materi 2', 'materi 3'];
+    $pdf->FancyTable('No','Materi','Nilai',$data2['Nilai_test1'],$data2['Nilai_test2'],$data2['Nilai_test3']);
     $pdf->SetFont('Times','',12);
     $pdf->Cell(20,10,'',0,1,'L');
     $pdf->MultiCell(0,5,'   Demikian permohonan ini kami sampaikan, surat keterangan yang kami buat dengan yang sebenar-benarnya dan dapat di pergunakan dengan semestinya.');
     $pdf->salam1('Wallahul Muwafiq Illa Aqwamit Thorieq');
     $pdf->salam('Wassalamu\'alaikum,Wr.Wb.');
-    $pdf->tanggal('Wonosobo, tanggal bulan 2021');
+    $pdf->tanggal('Wonosobo, '.tgl_indo(date('Y-m-d')));
     
     $pdf->Output('surat-keterangan-mahasiswa-baru.pdf','I');
+    function tgl_indo($tanggal){
+        $bulan = array (
+            1 =>   'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember'
+        );
+        $pecahkan = explode('-', $tanggal);
+        
+        // variabel pecahkan 0 = tanggal
+        // variabel pecahkan 1 = bulan
+        // variabel pecahkan 2 = tahun
+     
+        return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+    }
+     
+    // echo tgl_indo(date('Y-m-d')); // 21 Oktober 2017
+     
+    // echo "<br/>";
+    // echo "<br/>";
+     
+    // echo tgl_indo("1994-02-15"); // 15 Februari 1994
 ?>

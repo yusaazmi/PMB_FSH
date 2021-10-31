@@ -81,7 +81,7 @@
           <h4>Edit Data Diri</h4>
         <form action="edit_profile.php" method="post" enctype="multipart/form-data">
             <div class="row">
-              <input type="text" value="<?php echo $_SESSION['No_Pendaftaran'];?>" name="No_Pendaftaran">
+              <input type="hidden" value="<?php echo $_SESSION['No_Pendaftaran'];?>" name="No_Pendaftaran">
               <div class="col-md-6 form-group">
                   <label for="">Email</label>
                     <input type="text" class="form-control" id="email" placeholder="<?php echo $data['Email'];?>" disabled>

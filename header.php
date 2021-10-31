@@ -58,8 +58,9 @@ session_start();
             echo "<li><a href='about.php'>Pendaftaran</a></li>";
           }
           else{
+            // $no = echo $_SESSION['No_Pendaftaran'];
             echo "<li><a href='profile.php'>Profile</a></li>";
-            echo "<li><a href='pdf.php'>Status Pendaftaran</a></li>";
+            echo "<li><a href='pdf.php?id=".$_SESSION['No_Pendaftaran']."'>Status Pendaftaran</a></li>";
             echo "<li><a href='about.php'>Tentang</a></li>";
           }
           ?>

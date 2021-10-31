@@ -9,11 +9,13 @@ if($_FILES['Foto'] != null)
     $tmp = $_FILES['Foto']['tmp_name'];
     $gambar = date('dmYHis').$foto;
     $path = 'assets/foto_mahasiswa/'.$gambar;
+    $password = md5($_POST['Password']);
     
     move_uploaded_file($tmp,$path);
     
     $query=("UPDATE table_pendaftaran SET 
     Nama_lengkap='$_POST[Nama_lengkap]',
+    Password='$password',
     Tempat_lahir='$_POST[Tempat_lahir]',
     Tanggal_lahir='$_POST[Tanggal_lahir]',
     Jenis_kelamin='$_POST[Jenis_kelamin]',
