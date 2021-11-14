@@ -66,17 +66,16 @@
                                                 <td><?php echo $data['Prodi_pilihan'] ?></td>
                                                 <td><?php echo $data['Email'] ?></td>
                                                 <td><?php echo $data['Alamat'] ?></td>
-                                                <td><?php echo $data['Pekerjaan'];?></td>
-                                                <!-- <td>
-                                                    <form target="_blank" action="pdf_detail.php" method="POST">
-                                                        <input type="hidden" value="<?php echo $data['No_Pendaftaran'] ?>" name="No_Pendaftaran">
-                                                        <div class="row">
-                                                            <div class="col-6 p-2"><button type="submit" class="button" style="text-decoration:none;border:none;background-color: transparent;"><i class="mdi mdi-account-card-details"></i></button></div>
-                                                        </form>
-                                                            <input type="hidden" value="<?php echo $data['No_pendaftaran'];?>" name="No_Pendaftaran">
-                                                            <div class="col-6 p-2"><a href="delete_siswa.php?id=<?php echo $data['No_Pendaftaran']; ?>" class="button" style="text-decoration:none;border:none;background-color: transparent;"><i class="mdi mdi-delete"></i></a></div>
-                                                        </div>
-                                                    </td> -->
+                                                <?php
+                                                if($data['surat_keterangan'] === null)
+                                                {
+                                                    echo "<td>".$data['Pekerjaan']."</td>";
+                                                }
+                                                else
+                                                {
+                                                    echo "<td><a href='../assets/surat_keterangan/$data[surat_keterangan]'>".$data['Pekerjaan']."</a></td>";
+                                                }
+                                                ?>
                                             </tr>
                                             <?php } ?>
                                         </tbody>
