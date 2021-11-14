@@ -5,7 +5,7 @@
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
         <h2>Registrasi Mahasiswa Baru</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <!-- <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p> -->
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -94,6 +94,11 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <input type="file" class="form-control" name="foto" id="foto" placeholder="Upload Foto" required>
+                                <label for="">Upload Foto</label>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="file" class="form-control" name="surat_keterangan" id="surat_keterangan" required>
+                                <label for="">Upload Surat Keterangan Kerja</label>
                             </div>
                         </div>
                         <div class="my-3">
@@ -101,7 +106,7 @@
                             <div class="error-message"></div>
                             <div class="sent-message">Your message has been sent. Thank you!</div> -->
                         </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
+                        <div class="text-center"><button class="btn btn-success" type="submit">Submit</button></div>
                     </form>
                 </div>
             </div>

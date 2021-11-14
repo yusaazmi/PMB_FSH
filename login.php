@@ -158,7 +158,7 @@ a {
 
 .bg-green {
     color: #fff;
-    background-color: #70e000
+    background-color: #1A237E
 }
 
 @media screen and (max-width: 991px) {

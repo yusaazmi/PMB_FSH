@@ -18,14 +18,20 @@ $Pekerjaan = $_POST['Pekerjaan'];
 $Status_perkawinan = $_POST['Status_perkawinan'];
 
 $foto = $_FILES['foto']['name'];
+$surat_keterangan = $_FILES['surat_keterangan']['name'];
+
 $tmp = $_FILES['foto']['tmp_name'];
+$tmp2 = $_FILES['surat_keterangan']['tmp_name'];
 
 $gambar = date('dmYHis').$foto;
+$gambar2 = date('dmYHis').$surat_keterangan;
 
 $path = 'assets/foto_mahasiswa/'.$gambar;
-if(move_uploaded_file($tmp , $path)){
+$path2 = 'assets/surat_keterangan/'.$gambar2;
+move_uploaded_file($tmp,$path);
+if(move_uploaded_file($tmp2,$path2)){
 
-    $query = "INSERT INTO table_pendaftaran (Email,Password,Nama_lengkap,Prodi_pilihan,Tempat_lahir,Tanggal_lahir,Jenis_kelamin,Alamat,Provinsi,Kode_pos,Asal_sekolah,Nama_bapak,Nama_ibu,Pekerjaan,Status_perkawinan,foto) values ('$Email','$Password','$Nama_lengkap','$Prodi_pilihan','$Tempat_lahir','$Tanggal_lahir','$Jenis_kelamin','$Alamat','$Provinsi','$Kode_pos','$Asal_sekolah','$Nama_bapak','$Nama_ibu','$Pekerjaan','$Status_perkawinan','$gambar')";
+    $query = "INSERT INTO table_pendaftaran (Email,Password,Nama_lengkap,Prodi_pilihan,Tempat_lahir,Tanggal_lahir,Jenis_kelamin,Alamat,Provinsi,Kode_pos,Asal_sekolah,Nama_bapak,Nama_ibu,Pekerjaan,Status_perkawinan,foto,surat_keterangan) values ('$Email','$Password','$Nama_lengkap','$Prodi_pilihan','$Tempat_lahir','$Tanggal_lahir','$Jenis_kelamin','$Alamat','$Provinsi','$Kode_pos','$Asal_sekolah','$Nama_bapak','$Nama_ibu','$Pekerjaan','$Status_perkawinan','$gambar','$gambar2')";
     mysqli_query($dbc,$query) or die(mysqli_error($dbc));
 
     $select = "SELECT * FROM table_pendaftaran where Email = '$Email'";
@@ -36,7 +42,7 @@ if(move_uploaded_file($tmp , $path)){
     $hasil = mysqli_query($dbc,$query2) or die(mysqli_error($dbc));
     if($query2)
     {
-        echo "<script>alert('Berhasil Menambahkan!');window.location='index.php';</script>";
+        echo "<script>alert('Berhasil Melakukan Pendaftaran! Silahkan login');window.location='login.php';</script>";
     }
     else
     {

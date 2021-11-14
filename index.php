@@ -5,7 +5,7 @@
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>The Future<br>Is Yours</h1>
       <h3 style="color:white;">Unggul dalam mengintegrasikan ilmu-ilmu Syariah dan Hukum dalam konteks ke-Indonesiaan</h3 style="color:white;">
-      <a href="courses.html" class="btn-get-started">Get Started</a>
+      <a href="#" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- End Hero -->
 
@@ -17,19 +17,10 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/beranda.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Sejarah Singkat Fakultas</h3>
-            <!-- <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p> -->
-            <!-- <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul> -->
             <p>
             Sejarah berdirinya Fakultas Syari’ah dan Hukum Universitas Sains Al-Qur’an (UNSIQ) Jawa Tengah di Wonosobo tidak lepas dari dinamika dan perkembangan IIQ Jawa Tengah di Wonosobo. Fakultas Syari’ah dan Hukum berdiri pada tahun 1993/1994, dengan nama Fakultas Syari’ah. Fakultas Syari’ah diajukan untuk memenuhi eksistensi sebagai sebuah “Institut” yang harus memiliki, minimal tiga fakultas dengan masing-masing fakultas terdiri dari 2 (dua) program studi.
             </p>

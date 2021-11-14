@@ -72,8 +72,8 @@ class pdf extends FPDF
         $this->Cell(15);
         $this->SetFont('Times','BU','12');
         $this->Cell(15);
-        $this->Cell(0,10,'Nama ketua',0,10,'R');
-        $this->Cell(0,3,'NPU :',0,10,'R');
+        $this->Cell(0,10,'Herman Sujarwo, S.H.,M.H',0,10,'R');
+        $this->Cell(0,3,'NPU : 1910910111',0,10,'R');
     }
     function nama($text10)
     {
@@ -116,7 +116,7 @@ class pdf extends FPDF
     $this->SetLineWidth(.3);
     $this->SetFont('','B');
     // Header
-    $w = array(20, 35, 40);
+    $w = array(20, 50, 35);
     for($i=0;$i<3;$i++)
         $this->Cell($w[$i],7,$header[$i],1,0,'C',true);
     $this->Ln();
@@ -126,7 +126,7 @@ class pdf extends FPDF
     $this->SetFont('');
     // Data
     $fill = false;
-    $test = ['Materi 1','Materi 2','Materi 3'];
+    $test = ['Baca Tulis Al-Qur\'an','Bahasa Inggris','Komputer'];
     $nomr = 1;
     $nilai = [$data1,$data2,$data3];
     for($a=0;$a<=2;$a++)

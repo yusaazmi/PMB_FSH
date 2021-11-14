@@ -71,7 +71,6 @@ session_start();
               <!-- <li><a href="hukum_ekonomi.php">Hukum Ekonomi Syari'ah</a></li> -->
               <li><a href="#">Ilmu Al-Qur'an</a></li>
               <li><a href="#">Ilmu Hukum</a></li>
-              <li><a href="#">Perbankan Syari'ah</a></li>
             </ul>
           </li>
           <li><a href="contact.php">Kontak</a></li>
