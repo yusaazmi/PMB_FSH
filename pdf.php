@@ -144,6 +144,12 @@ class pdf extends FPDF
     $this->Cell(array_sum($w),0,'','T');
     }
 }
+$cek_pembayaran = "SELECT * FROM table_pembayaran WHERE No_Pendaftaran = '$_GET[id]'";
+$cek1 = mysqli_query($dbc,$cek_pembayaran);
+$data_status = mysqli_fetch_array($cek1);
+if($data_status['status_pembayaran'] === 'Valid')
+{
+
 $query = "SELECT * from table_pendaftaran WHERE No_Pendaftaran = '$_GET[id]'";
 $query2 = "SELECT * from table_hasil_test WHERE No_Pendaftaran = '$_GET[id]'";
 $sql = mysqli_query($dbc,$query);
@@ -180,29 +186,36 @@ $data2 = mysqli_fetch_array($sql2);
     $pdf->tanggal('Wonosobo, '.tgl_indo(date('Y-m-d')));
     
     $pdf->Output('surat-keterangan-mahasiswa-baru.pdf','I');
-    function tgl_indo($tanggal){
-        $bulan = array (
-            1 =>   'Januari',
-            'Februari',
-            'Maret',
-            'April',
-            'Mei',
-            'Juni',
-            'Juli',
-            'Agustus',
-            'September',
-            'Oktober',
-            'November',
-            'Desember'
-        );
-        $pecahkan = explode('-', $tanggal);
-        
-        // variabel pecahkan 0 = tanggal
-        // variabel pecahkan 1 = bulan
-        // variabel pecahkan 2 = tahun
-     
-        return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
-    }
+    
+}
+else
+{
+    echo "<script>alert('Anda Harus Mengupload Bukti Pembayaran Terlebih Dahulu! Bukti akan di cek oleh admin kami!');window.location='about.php';</script>";
+}
+
+function tgl_indo($tanggal){
+    $bulan = array (
+        1 =>   'Januari',
+        'Februari',
+        'Maret',
+        'April',
+        'Mei',
+        'Juni',
+        'Juli',
+        'Agustus',
+        'September',
+        'Oktober',
+        'November',
+        'Desember'
+    );
+    $pecahkan = explode('-', $tanggal);
+    
+    // variabel pecahkan 0 = tanggal
+    // variabel pecahkan 1 = bulan
+    // variabel pecahkan 2 = tahun
+ 
+    return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+}
      
     // echo tgl_indo(date('Y-m-d')); // 21 Oktober 2017
      

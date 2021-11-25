@@ -153,6 +153,10 @@ session_start();
                                     class="hide-menu">Calon Mahasiswa</span></a></li>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="data_pembayaran.php" aria-expanded="false"><i class="mdi mdi-file-document-box"></i><span
+                                    class="hide-menu">Pembayaran</span></a></li>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="data_admin.php" aria-expanded="false"><i class="mdi mdi-account"></i><span
                                     class="hide-menu">List Admin</span></a></li>
                         </li>

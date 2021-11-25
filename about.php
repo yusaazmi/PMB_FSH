@@ -29,7 +29,15 @@
               <li><i class="bi bi-check-circle"></i>Foto berwarna merah ukuran 3x4 gaya formal</li>
               <li><i class="bi bi-check-circle"></i>Scan Akta Kelahiran dan Kartu Keluarga(KK).</li>
               <li><i class="bi bi-check-circle"></i>Melakukan pembayaran biaya pendaftaran melalui Bank Jateng atau jaringan IDN menggunakan nomor pendaftaran (tidak menggunakan nomor rekening).</li>
+              <li><i class="bi bi-check-circle"></i>Setelah Melakukan pembayaran pendaftaran silahkan upload bukti pembayaran <button id="upload_pembayaran" style="border:none;background-color:none;">Disini</button>
             </ul>
+            <div class="d-none" id="form1">
+              <form action="simpan_pembayaran.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="bukti_pembayaran">
+                <input type="text" name="id_user" value="<?php echo $_SESSION['No_Pendaftaran'];?>">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
             <!-- <p>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
             </p> -->
@@ -253,10 +261,18 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+  $(document).ready(function(){
+    $("#upload_pembayaran").click(function(){
+      $("#form1").removeClass("d-none",1000);
+    });
+  });
+</script>
 </body>
 
 </html>
