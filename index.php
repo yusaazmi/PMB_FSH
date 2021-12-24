@@ -43,7 +43,7 @@
           <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Visi</h3>
             <p>
-              Unggul dalam mengitergrasikan ilmu-ilmu syari’ah dan hukum yang hukum yang Qur’ani. humanis dan transformatif ke-indonesian pada tahun 2026.
+              Unggul dalam mengitergrasikan ilmu-ilmu syari’ah dan hukum yang hukum yang Qur’ani. humanis dan transformatif ke-indonesian.
             </p>
             <br>
             <h3>Misi</h3>
@@ -68,7 +68,7 @@
         <div class="row counters">
 
           <div class="col-lg-4 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
             <p>Mahasiswa</p>
           </div>
 
@@ -78,7 +78,7 @@
           </div>
 
           <div class="col-lg-4 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1" class="purecounter"></span>
             <p>Dosen</p>
           </div>
 

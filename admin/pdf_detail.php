@@ -16,7 +16,7 @@ $pdf->SetFont('Arial','B',16);
 $pdf->Cell(170,7,'BIODATA CALON MAHASISWA FAKULTAS HUKUM DAN SYARIAH',0,1,'C');
 $pdf->Ln();
 $pdf->SetFont('Arial','B',12);
-// $pdf->Cell(190,7,'DAFTAR SISWA KELAS IX JURUSAN REKAYASA PERANGKAT LUNAK',0,1,'C');
+
 
 // Memberikan space kebawah agar tidak terlalu rapat
 $pdf->Cell(10,7,'',0,1);

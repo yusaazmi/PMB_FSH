@@ -68,10 +68,14 @@ session_start();
 
           <li class="dropdown"><a href="#"><span>Program Studi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="hukum_keluarga.php">Hukum Keluarga</a></li>
-              <!-- <li><a href="hukum_ekonomi.php">Hukum Ekonomi Syari'ah</a></li> -->
-              <li><a href="#">Ilmu Al-Qur'an</a></li>
-              <li><a href="#">Ilmu Hukum</a></li>
+              <li><a href="hukum_keluarga.php">Hukum Keluarga Islam</a></li>
+              <!-- <li><a href="Hukum_Keluarga_Islam.php">Hukum Keluarga Islam</a></li> -->
+              <li><a href="Hukum_Ekonomi_Syariah.php">Hukum Ekonomi Syairiah</a></li>
+              <!-- <li><a href="Hukum_Ekonomi_Syariah.php">Hukum Ekonomi Syari'ah</a></li> -->
+              <li><a href="Ilmu_Al-Qluraan_Dan_Tafsir.php">Ilmu Al-Quraan Dan Tafsir </a></li>
+              <!-- <li><a href="Ilmu_Al-Quraan_Dan_Tafsir.php">Ilmu Al-Quraan Dan Tafsir</a></li> -->
+              <li><a href="Ilmu_Hukum.php">Ilmu Hukum</a></li>
+              <!-- <li><a href="Ilmu_Hukum.php">Ilmu Hukum</a></li> -->
             </ul>
           </li>
           <li><a href="contact.php">Kontak</a></li>

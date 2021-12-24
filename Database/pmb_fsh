@@ -1,0 +1,275 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 25, 2021 at 12:00 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `pmb_fsh`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_admin`
+--
+
+CREATE TABLE `table_admin` (
+  `id_admin` int(30) NOT NULL,
+  `Username` varchar(100) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `Nama` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `table_admin`
+--
+
+INSERT INTO `table_admin` (`id_admin`, `Username`, `Password`, `Nama`) VALUES
+(3, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_contact`
+--
+
+CREATE TABLE `table_contact` (
+  `id` int(20) NOT NULL,
+  `nama` varchar(40) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `subjek` varchar(50) NOT NULL,
+  `pesan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `table_contact`
+--
+
+INSERT INTO `table_contact` (`id`, `nama`, `email`, `subjek`, `pesan`) VALUES
+(1, 'asdasd', 'ascd@gmail.com', 'salak', 'asdasdasdasdas'),
+(2, 'asdasd', 'ascd@gmail.com', 'salak', 'asdasdasdasdas'),
+(3, 'asdasd', 'ascd@gmail.com', 'salak', 'asdasdasdasdas'),
+(4, 'asdasd', 'ascd@gmail.com', 'salak', 'asdasdasdasdas'),
+(5, 'asdasd', 'ascd@gmail.com', 'salak', 'asdasdasdasdas'),
+(6, 'slamet susanto', 'customer@proworker.co.id', 'salak', 'aasdasdasdasdsa');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_hasil_test`
+--
+
+CREATE TABLE `table_hasil_test` (
+  `Id_test` int(50) NOT NULL,
+  `No_Pendaftaran` int(50) NOT NULL,
+  `Nilai_test1` int(20) DEFAULT NULL,
+  `Nilai_test2` int(20) DEFAULT NULL,
+  `Nilai_test3` int(20) DEFAULT NULL,
+  `Status` enum('Diterima','Tidak Diterima','Belum Diterima','') NOT NULL DEFAULT 'Belum Diterima'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `table_hasil_test`
+--
+
+INSERT INTO `table_hasil_test` (`Id_test`, `No_Pendaftaran`, `Nilai_test1`, `Nilai_test2`, `Nilai_test3`, `Status`) VALUES
+(1, 39, 0, 0, 0, 'Belum Diterima'),
+(2, 13, 24, 15, 24, 'Belum Diterima'),
+(3, 40, 0, 0, 0, 'Belum Diterima'),
+(4, 41, 0, 0, 0, 'Belum Diterima'),
+(5, 42, 80, 90, 70, 'Diterima');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_mahasiswa`
+--
+
+CREATE TABLE `table_mahasiswa` (
+  `id_mahasiswa` int(50) NOT NULL,
+  `NIM` int(20) NOT NULL,
+  `No_Pendaftaran` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_pembayaran`
+--
+
+CREATE TABLE `table_pembayaran` (
+  `id_bayar` int(50) NOT NULL,
+  `No_Pendaftaran` int(50) NOT NULL,
+  `bukti_pembayaran` varchar(500) NOT NULL,
+  `status_pembayaran` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `table_pembayaran`
+--
+
+INSERT INTO `table_pembayaran` (`id_bayar`, `No_Pendaftaran`, `bukti_pembayaran`, `status_pembayaran`) VALUES
+(1, 42, '25112021113305screencapture-127-0-0-1-8000-2021-11-20-21_25_34.png', 'Tidak Valid');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `table_pendaftaran`
+--
+
+CREATE TABLE `table_pendaftaran` (
+  `No_Pendaftaran` int(50) NOT NULL,
+  `Email` varchar(40) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `Prodi_pilihan` varchar(50) NOT NULL,
+  `Nama_lengkap` varchar(100) NOT NULL,
+  `Tempat_lahir` varchar(100) NOT NULL,
+  `Tanggal_lahir` datetime NOT NULL,
+  `Jenis_kelamin` enum('Laki-laki','Perempuan') NOT NULL,
+  `Alamat` varchar(100) NOT NULL,
+  `Provinsi` varchar(30) DEFAULT NULL,
+  `Kode_pos` int(50) NOT NULL,
+  `Asal_sekolah` varchar(100) NOT NULL,
+  `Nama_bapak` varchar(100) NOT NULL,
+  `Nama_ibu` varchar(100) NOT NULL,
+  `Pekerjaan` varchar(100) NOT NULL,
+  `Foto` varchar(500) NOT NULL,
+  `surat_keterangan` varchar(500) DEFAULT NULL,
+  `Status_perkawinan` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `table_pendaftaran`
+--
+
+INSERT INTO `table_pendaftaran` (`No_Pendaftaran`, `Email`, `Password`, `Prodi_pilihan`, `Nama_lengkap`, `Tempat_lahir`, `Tanggal_lahir`, `Jenis_kelamin`, `Alamat`, `Provinsi`, `Kode_pos`, `Asal_sekolah`, `Nama_bapak`, `Nama_ibu`, `Pekerjaan`, `Foto`, `surat_keterangan`, `Status_perkawinan`) VALUES
+(13, 'yusaazmi123@gmail.com', 'f5bb0c8de146c67b44babbf4e6584cc0', 'wsajdkasjd', 'yusa azmi', 'wonosobo', '2021-10-11 00:00:00', 'Laki-laki', 'asdasdasdasdaszxczxczxczxczxczxczxczxc', 'jateng', 123123, 'asdasdasdasdasdas', 'zczx', 'asd', 'asdasdasdasd', '16102021190829carbon (8).png', NULL, 'Kawin'),
+(39, 'test1213@gmail.com', 'f5bb0c8de146c67b44babbf4e6584cc0', 'Ilmu Hukum', 'test', 'asdasdsadsad', '2021-10-04 00:00:00', 'Laki-laki', 'adfasdfasfsfsfafsafsadf', 'jateng', 123123, 'asdasdasdasdasdassdasdsdaasdasdzxc', 'zxczxc', 'eqweqweqw', 'asasdasdsa', '14102021123327carbon (8).png', NULL, 'Kawin'),
+(40, 'test23@gmail.com', 'aa0cf9422538f02e81568fdbf7373828', 'Hukum Keluarga', 'test2', 'wonobo', '2021-11-02 00:00:00', 'Laki-laki', 'adfasdfasfsfsfafsafsadf', 'jatengs', 123123, 'asdasdasdasdasdas', 'zxczxc', 'zxczxcqw', 'asasdasdsa', '14112021101812murai.jpg', '141120211018121636619082_cv1 (1).pdf', 'Belum Kawin'),
+(41, 'test3@gmail.com', 'aa0cf9422538f02e81568fdbf7373828', 'Hukum Keluarga', 'test3', 'wonobo', '2021-11-04 00:00:00', 'Laki-laki', 'adfasdfasfsfsfafsafsadf', 'jatengs', 123123, 'asdasdasdasdasdassdasdsdaasd', 'zczx', 'asdasdasd', 'asasdasdsa', '14112021103824kekeyi.jpg', '141120211038241636619082_cv1 (1).pdf', 'Kawin'),
+(42, 'asd@gmail.com', 'a3dcb4d229de6fde0db5686dee47145d', 'Hukum Keluarga', 'asdasdasd', 'wonobo', '2021-11-10 00:00:00', 'Laki-laki', 'adfasdfasfsfsfafsafsadf', 'jatengs', 123123, 'asdasdasdasdasdassdasdsdaasd', 'zxczxc', 'zxczxcqw', 'asasdasdsa', '14112021105119tesla.jpg', '141120211051191636511277_cv.pdf', 'Kawin');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `table_admin`
+--
+ALTER TABLE `table_admin`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `table_contact`
+--
+ALTER TABLE `table_contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `table_hasil_test`
+--
+ALTER TABLE `table_hasil_test`
+  ADD PRIMARY KEY (`Id_test`),
+  ADD KEY `No_Pendaftaran` (`No_Pendaftaran`);
+
+--
+-- Indexes for table `table_mahasiswa`
+--
+ALTER TABLE `table_mahasiswa`
+  ADD PRIMARY KEY (`id_mahasiswa`),
+  ADD KEY `No_Pendaftaran` (`No_Pendaftaran`);
+
+--
+-- Indexes for table `table_pembayaran`
+--
+ALTER TABLE `table_pembayaran`
+  ADD PRIMARY KEY (`id_bayar`),
+  ADD KEY `No_Pendaftaran` (`No_Pendaftaran`);
+
+--
+-- Indexes for table `table_pendaftaran`
+--
+ALTER TABLE `table_pendaftaran`
+  ADD PRIMARY KEY (`No_Pendaftaran`),
+  ADD UNIQUE KEY `email` (`Email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `table_admin`
+--
+ALTER TABLE `table_admin`
+  MODIFY `id_admin` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `table_contact`
+--
+ALTER TABLE `table_contact`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `table_hasil_test`
+--
+ALTER TABLE `table_hasil_test`
+  MODIFY `Id_test` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `table_mahasiswa`
+--
+ALTER TABLE `table_mahasiswa`
+  MODIFY `id_mahasiswa` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `table_pembayaran`
+--
+ALTER TABLE `table_pembayaran`
+  MODIFY `id_bayar` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `table_pendaftaran`
+--
+ALTER TABLE `table_pendaftaran`
+  MODIFY `No_Pendaftaran` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `table_hasil_test`
+--
+ALTER TABLE `table_hasil_test`
+  ADD CONSTRAINT `table_hasil_test_ibfk_1` FOREIGN KEY (`No_Pendaftaran`) REFERENCES `table_pendaftaran` (`No_Pendaftaran`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Constraints for table `table_mahasiswa`
+--
+ALTER TABLE `table_mahasiswa`
+  ADD CONSTRAINT `table_mahasiswa_ibfk_1` FOREIGN KEY (`No_Pendaftaran`) REFERENCES `table_pendaftaran` (`No_Pendaftaran`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Constraints for table `table_pembayaran`
+--
+ALTER TABLE `table_pembayaran`
+  ADD CONSTRAINT `table_pembayaran_ibfk_1` FOREIGN KEY (`No_Pendaftaran`) REFERENCES `table_pendaftaran` (`No_Pendaftaran`) ON DELETE NO ACTION ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

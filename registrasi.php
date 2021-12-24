@@ -17,14 +17,9 @@
                 <div class="col-lg-12 mt-5 mt-lg-0">
                     <form action="simpan_registrasi.php" method="post" enctype="multipart/form-data">
                         <div class="row">
-                            <div class="col-md-6 form-group">
+                            <!-- <div class="col-md-6 form-group">
                                 <input type="text" name="no_pendaftaran" class="form-control" id="no_pendaftaran" placeholder="No pendaftaran *diisi oleh petugas" disabled>
-                            </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="text" class="form-control" name="Nama_lengkap" id="Nama_lengkap" placeholder="Nama Lengkap" required>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
+                            </div> -->
                             <div class="col-md-6 form-group">
                                 <input type="email" name="Email" class="form-control" id="Email" placeholder="Email">
                             </div>
@@ -33,13 +28,20 @@
                             </div>
                         </div>
                         <div class="row mt-2">
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="text" class="form-control" name="Nama_lengkap" id="Nama_lengkap" placeholder="Nama Lengkap" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="text" class="form-control" name="No_telephone" id="No_telephone" placeholder="Nomor Telephone" required>
+                            </div>
+                        </div>
+                        <!-- <div class="row mt-2">
                             <div class="col-md-4 form-group">
                             <select class="form-select" name="Prodi_pilihan" aria-label="Default select example">
                                 <option selected>Pilih Program Studi</option>
-                                <option value="Hukum Keluarga">Hukum Keluarga</option>
-                                <option value="Ilmu Hukum">Ilmu Hukum</option>
+                                <option value="Hukum Keluarga">Hukum Keluarga Islam</option>
                                 <option value="Hukum Ekonomi Syari'ah">Hukum Ekonomi Syari'ah</option>
-                                <option value="Perbankan Syari'ah">Perbankan Syari'ah</option>
+                                <option value="Ilmu Hukum">Ilmu Hukum</option>
                                 <option value="Ilmu Al-Qur'an dan Tafsir">Ilmu Al-Qur'an dan Tafsir</option>
                             </select>
                             </div>
@@ -98,14 +100,15 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <input type="file" class="form-control" name="surat_keterangan" id="surat_keterangan" required>
-                                <label for="">Upload Surat Keterangan Kerja</label>
+                                <label for="">Upload Surat Keterangan Kerja Dan Persyaratan Lainnya</label>
                             </div>
-                        </div>
-                        <div class="my-3">
+                        </div> -->
+                        <div class="my-5">
                             <!-- <div class="loading">Loading</div>
                             <div class="error-message"></div>
                             <div class="sent-message">Your message has been sent. Thank you!</div> -->
                         </div>
+                        <div class="my-5"></div>
                         <div class="text-center"><button class="btn btn-success" type="submit">Submit</button></div>
                     </form>
                 </div>

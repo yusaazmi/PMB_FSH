@@ -48,21 +48,21 @@ $data = mysqli_fetch_array($sql);
                                     <input type="hidden" name="No_Pendaftaran" value="<?php echo $data['No_Pendaftaran'];?>">
                                     <input type="hidden" name="Id_test" value="<?php echo $data['Id_test'];?>">
                                     <div class="form-group row">
-                                        <label for="Nilai_test1" class="col-sm-3 text-end control-label col-form-label">Nilai Test 1</label>
+                                        <label for="Nilai_test1" class="col-sm-3 text-end control-label col-form-label">Baca Tulis Al-Qur'an</label>
                                         <div class="col-sm-9">
                                             <input type="number" class="form-control" id="Nilai_test1"
                                                 placeholder="Nilai Test 1" name="Nilai_test1">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="Nilai_test2" class="col-sm-3 text-end control-label col-form-label">Nilai Test 2</label>
+                                        <label for="Nilai_test2" class="col-sm-3 text-end control-label col-form-label">Bahasa Inggris</label>
                                         <div class="col-sm-9">
                                             <input type="number" class="form-control" id="Nilai_test2"
                                                 placeholder="Nilai Test 2" name="Nilai_test2">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="Nilai_test3" class="col-sm-3 text-end control-label col-form-label">Nilai Test 3</label>
+                                        <label for="Nilai_test3" class="col-sm-3 text-end control-label col-form-label">Komputer</label>
                                         <div class="col-sm-9">
                                             <input type="number" class="form-control" id="Nilai_test3"
                                                 placeholder="Nilai Test 3" name="Nilai_test3">

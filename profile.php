@@ -98,7 +98,21 @@
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
                 <label for="">Program Studi</label>
-                  <input type="text" class="form-control" placeholder="" value="<?php echo $data['Prodi_pilihan']; ?>" disabled>
+                <select class="form-select" name="Prodi_pilihan" aria-label="Default select example">
+                    <?php 
+                    if($data['Prodi_pilihan'] = null){
+                    ?>
+                    <option selected value="">Pilih Prodi</option>
+                    <?php } 
+                    elseif($data['Prodi_pilihan'] != null){
+                      ?>
+                      <option selected value="<?php echo $data['Prodi_pilihan'];?>"><?php echo $data['Prodi_pilihan'];?></option>
+                    <?php } ?>
+                    <option value="Hukum Keluarga Islam">Hukum Keluarga Islam</option>
+                    <option value="Hukum Ekonomi Syari'ah">Hukum Ekonomi Syari'ah</option>
+                    <option value="Ilmu Al-Qur'an dan Tafsir">Ilmu Al-Qur'an dan Tafsir</option>
+                    <option value="Ilmu Hukum">Ilmu Hukum</option>
+                </select>
               </div>
             </div>
             <div class="row mt-2">
@@ -135,9 +149,15 @@
                     <input type="text" class="form-control" name="Kode_pos" id="Kode_pos" placeholder="Kode Pos" value="<?php echo $data['Kode_pos'];?>" required>
                 </div>
             </div>
-            <div class="form-group mt-3">
-              <label for="">Asal Sekolah</label>
+            <div class="row mt-2">
+              <div class="col-md-6 form-group">
+                <label for="">Asal Sekolah</label>
                 <input type="text" class="form-control" name="Asal_sekolah" id="Asal_sekolah" placeholder="Asal Sekolah" value="<?php echo $data['Asal_sekolah'];?>" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="">Nomor Telephone</label>
+                <input type="text" class="form-control" name="No_telephone" id="No_telephone" placeholder="Asal Sekolah" value="<?php echo $data['No_telephone'];?>" required>
+              </div>
             </div>
             <div class="form-group mt-3">
               <label for="">Alamat Lengkap</label>
@@ -154,7 +174,7 @@
                 </div>
             </div>
             <div class="row mt-2">
-                <div class="col-md-6 form-group">
+                <div class="col-md-4 form-group">
                 <label for="">Status Perkawinan</label>
                 <select class="form-select" name="Status_perkawinan" aria-label="Default select example">
                     <option selected value="<?php echo $data['Status_perkawinan'];?>"><?php echo $data['Status_perkawinan'];?></option>
@@ -162,9 +182,13 @@
                     <option value="Belum Kawin">Belum Kawin</option>
                 </select>
                 </div>
-                <div class="col-md-6 form-group">
-                  <label for="">Foto</label>
+                <div class="col-md-4 form-group">
+                  <label for="">Foto(max file 10mb,jpg/png)</label>
                     <input type="file" class="form-control" name="Foto" id="Foto" placeholder="Upload Foto">
+                </div>
+                <div class="col-md-4 form-group">
+                  <label for="">Surat Kererangan Kerja(max file 5mb,pdf)</label>
+                    <input type="file" class="form-control" name="surat_keterangan" id="surat_keterangan" placeholder="Upload Surat Keterangan">
                 </div>
             </div>
             <div class="my-3">

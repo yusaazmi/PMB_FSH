@@ -39,9 +39,9 @@
                                                 <th>No</th>
                                                 <th>No Pendaftaran</th>
                                                 <th>Nama</th>
-                                                <th>Tes 1</th>
-                                                <th>Tes 2</th>
-                                                <th>Tes 3</th>
+                                                <th>Baca Tulis Al-Qur'an</th>
+                                                <th>Bahasa Inggris</th>
+                                                <th>Komputer</th>
                                                 <th>Status</th>
                                                 <th>Aksi</th>
                                             </tr>

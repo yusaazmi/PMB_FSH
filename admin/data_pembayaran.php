@@ -38,6 +38,8 @@
                                                 <?php $no = 1; ?>
                                                 <th>No</th>
                                                 <th>No Pendaftaran</th>
+                                                <th>Nama Pendaftar</th>
+                                                <th>Pekerjaan</th>
                                                 <th>Bukti Pembayaran</th>
                                                 <th>Status Pembayaran</th>
                                                 <th>Aksi</th>
@@ -52,8 +54,17 @@
                                             <tr>
                                                 <td><?php echo $no; ?></td>
                                                 <td><?php echo $data['No_Pendaftaran'] ?></td>
+                                                <td><?php echo $data['Nama_lengkap'] ?></td>
+                                                <td><?php echo $data['Pekerjaan'] ?></td>
                                                 <td><a href="../assets/surat_keterangan/<?php echo $data['bukti_pembayaran'];?>" download>Klik untuk lihat bukti pembayaran</a></td>
-                                                <td><?php echo $data['status_pembayaran'] ?></td>
+                                                <?php
+                                                if($data['status_pembayaran'] === 'Valid'){
+                                                    echo "<td>".$data['status_pembayaran']." <i class='fas fa-check'></i></td>";
+                                                }
+                                                else{
+                                                    echo "<td>".$data['status_pembayaran']." <i class='fas fa-times'></i></td>";
+                                                }
+                                                ?>
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-3 p-0"><a href="edit_pembayaran.php?id=<?php echo $data['id_bayar']; ?>" class="button" style="text-decoration:none;border:none;background-color: transparent;"><i class="mdi mdi-grease-pencil"></i></a></div>

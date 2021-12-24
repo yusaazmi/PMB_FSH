@@ -166,10 +166,10 @@ $data2 = mysqli_fetch_array($sql2);
     $pdf->judul('FAKULTAS SYARIAH DAN HUKUM', 'UNIVERSITAS SAINS AL-QUR\'AN','JAWA TENGAH DI WONOSOBO','Fakultas Syariah dan Hukum (FSH) Jl. KH. Hasyim Asy\'ari KM.03, Kalibeber, Mojotengah, Wonosobo 56351', 'Kontak : 0813-2424-7010 | Website: http://pmb.unsiq.ac.id Dan http://unsiq.ac.id');
     //membuat garis ganda tebal dan tipis
     $pdf->garis();
-    $pdf->nomor('No Surat Keterangan : 001/PMB-FSH/UNSIQ/Bulan Romawi/2021','No Pendaftaran          : Nomor Pendaftaran','Hal                             : Surat Keterangan');
+    $pdf->nomor('No Surat Keterangan : 001/PMB-FSH/UNSIQ/Bulan Romawi/2022','No Pendaftaran          : Nomor Pendaftaran','Hal                             : Surat Keterangan');
     $pdf->salam('Assalamual\'aikum, Wr.Wb.');
     $pdf->SetFont('Times','',12);
-    $pdf->MultiCell(0, 5, '     Yang bertanda tanda tangan di bawah ini Ketua Panitia Mahasiswa Baru Universitas Sains Al-Quraan (UNSIQ) Jawa Tengah di Wonosobo Tahun Akademik 2021. Berdasarkan dari hasil seleksi yang di lakukan calon mahasiswa baru Gelombang pada Hari, Tanggal Bulan Tahun menyatakan bahwa :');
+    $pdf->MultiCell(0, 5, '     Yang bertanda tanda tangan di bawah ini Ketua Panitia Mahasiswa Baru Universitas Sains Al-Quraan (UNSIQ) Jawa Tengah di Wonosobo Tahun Akademik 2022. Berdasarkan dari hasil seleksi yang di lakukan calon mahasiswa baru Gelombang pada Hari, Tanggal Bulan Tahun menyatakan bahwa :');
     $pdf->nama('Nama                 : '.$data['Nama_lengkap']);
     $pdf->nim('No Pendaftaran  : '.$data['No_Pendaftaran']);
     $pdf->prodi('Prodi                  : '.$data['Prodi_pilihan']);
