@@ -47,6 +47,24 @@
 
       </div>
     </section><!-- End About Section -->
+    <div class="container mb-3">
+      <div class="text-center">
+        <h2>Pengumuman</h2>
+      </div>
+        <?php 
+          $query = "SELECT * FROM table_pengumuman where status = 1 ORDER BY date DESC";
+          $sql = mysqli_query($dbc,$query);
+          while($data = mysqli_fetch_array($sql))
+          {
+        ?>
+        <h4><?php echo date("d M Y", strtotime($data['date'])); ?></h4>
+        <div class="text-center">
+          <iframe src="assets/pengumuman/<?php echo $data['file'];?>" width="900px" height="900px" frameBorder="0" scrolling="auto"></iframe>
+          </div>
+        <?php 
+        }
+        ?>
+    </div>
     <section id="about" class="about pt-2">
       <div class="container" data-aos="fade-up">
 

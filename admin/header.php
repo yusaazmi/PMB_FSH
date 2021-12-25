@@ -160,6 +160,10 @@ session_start();
                                 href="data_admin.php" aria-expanded="false"><i class="mdi mdi-account"></i><span
                                     class="hide-menu">List Admin</span></a></li>
                         </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="data_pengumuman.php" aria-expanded="false"><i class="mdi mdi-newspaper"></i><span
+                                    class="hide-menu">Pengumuman</span></a></li>
+                        </li>
                         <!-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="pages-buttons.html" aria-expanded="false"><i
                                     class="mdi mdi-relative-scale"></i><span class="hide-menu">Buttons</span></a>
