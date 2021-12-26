@@ -39,10 +39,10 @@
                                                 <th>No</th>
                                                 <th>No Pendaftaran</th>
                                                 <th>Nama Pendaftar</th>
+                                                <th>Jurusan</th>
                                                 <th>Pekerjaan</th>
                                                 <th>Bukti Pembayaran</th>
                                                 <th>Status Pembayaran</th>
-                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -55,21 +55,29 @@
                                                 <td><?php echo $no; ?></td>
                                                 <td><?php echo $data['No_Pendaftaran'] ?></td>
                                                 <td><?php echo $data['Nama_lengkap'] ?></td>
+                                                <td><?php echo $data['Prodi_pilihan'] ?></td>
                                                 <td><?php echo $data['Pekerjaan'] ?></td>
                                                 <td><a href="../assets/surat_keterangan/<?php echo $data['bukti_pembayaran'];?>" download>Klik untuk lihat bukti pembayaran</a></td>
                                                 <?php
                                                 if($data['status_pembayaran'] === 'Valid'){
-                                                    echo "<td>".$data['status_pembayaran']." <i class='fas fa-check'></i></td>";
+                                                    echo "<td>";
+                                                    echo "<form action='simpan_edit_pembayaran.php' method='POST'>";
+                                                    echo "<input type='hidden' name='id_bayar' value='$data[id_bayar]'/>";
+                                                    echo "<input type='hidden' name='status_pembayaran' value='Tidak Valid'>";
+                                                    echo "<button class='btn btn-success' style='color:white'>Valid</button>";
+                                                    echo "</form>";
+                                                    echo "</td>";
                                                 }
-                                                else{
-                                                    echo "<td>".$data['status_pembayaran']." <i class='fas fa-times'></i></td>";
+                                                elseif($data['status_pembayaran'] === 'Tidak Valid'){
+                                                    echo "<td>";
+                                                    echo "<form action='simpan_edit_pembayaran.php' method='POST'>";
+                                                    echo "<input type='hidden' name='id_bayar' value='$data[id_bayar]'/>";
+                                                    echo "<input type='hidden' name='status_pembayaran' value='Valid'>";
+                                                    echo "<button class='btn btn-secondary' style='color:white'>Tidak Valid</button>";
+                                                    echo "</form>";
+                                                    echo "</td>";
                                                 }
                                                 ?>
-                                                <td>
-                                                    <div class="row">
-                                                        <div class="col-3 p-0"><a href="edit_pembayaran.php?id=<?php echo $data['id_bayar']; ?>" class="button" style="text-decoration:none;border:none;background-color: transparent;"><i class="mdi mdi-grease-pencil"></i></a></div>
-                                                    </div>
-                                                </td>
                                             </tr>
                                             <?php $no++; } ?>
                                         </tbody>
